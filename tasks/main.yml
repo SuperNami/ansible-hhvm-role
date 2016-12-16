@@ -1,0 +1,31 @@
+---
+- include: install/gpg-key.yml
+  tags: hhvm_gpg_key
+
+
+- include: install/debian.yml
+  tags: hhvm_debian_repository
+
+
+- include: install/ubuntu.yml
+  tags: hhvm_ubuntu_repository
+
+
+- include: install/install.yml
+  tags: hhvm_install
+
+
+- include: configure/debug.yml
+  tags: hhvm_debug
+
+
+- include: configure/systemd.yml
+  tags: hhvm_systemd
+
+
+- include: configure/composer.yml
+  tags: hhvm_composer
+
+
+- include: configure/ini.yml
+  tags: hhvm_ini

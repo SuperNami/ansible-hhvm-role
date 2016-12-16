@@ -1,0 +1,6 @@
+---
+- name: start hhvvm at system boot
+  command: update-rc.d hhvm defaults creates=/etc/init.d/hhvm
+  notify:
+  - restart hhvm
+  - restart nginx

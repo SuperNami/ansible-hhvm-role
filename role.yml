@@ -1,0 +1,11 @@
+---
+- name: hhvm
+  hosts: all
+  user: root
+  become: true
+  roles:
+  - hhvm
+  handlers:
+  - include: handlers/main.yml
+  vars_files:
+  - vars/local.yml

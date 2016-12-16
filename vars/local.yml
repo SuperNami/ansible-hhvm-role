@@ -1,0 +1,15 @@
+---
+### Distribution
+
+# Ubuntu
+ubuntu_version_name: vivid
+
+# Debian
+debian_version_name: jessie
+
+# HHVM connection
+hhvm_tcp_port: 8000
+hhvm_socket: /var/run/hhvm/hhvm.sock
+
+# Error log location
+hhvm_error_log: /var/log/hhvm/error.log

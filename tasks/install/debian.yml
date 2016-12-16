@@ -1,0 +1,4 @@
+---
+- name: add hhvm repository
+  apt_repository: repo='deb http://dl.hhvm.com/debian {{ debian_version_name }} main'
+                  state=present

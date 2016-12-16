@@ -1,0 +1,22 @@
+---
+- name: copy server ini
+  template: src=templates/server.ini.j2
+            dest=/etc/hhvm/server.ini
+            owner=root
+            group=root
+            mode=0664
+  notify: restart hhvm
+
+
+- name: copy php ini
+  template: src=templates/php.ini.j2
+            dest=/etc/hhvm/php.ini
+            owner=root
+            group=root
+            mode=0664
+  notify: restart hhvm
+
+
+- name: remove hhvm conf
+  file: path=/etc/nginx/hhvm.conf
+        state=absent
